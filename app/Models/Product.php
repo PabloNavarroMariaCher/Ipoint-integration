@@ -5,55 +5,74 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 
 
-class Product extends Model
-{
-    protected $fillable = [
+class Product extends Model{
+     protected $table = 'products_configurable';
+
+     protected $fillable = [
         'guiaTalles',
         'codigo',
         'nombre',
         'IdProducto',
-        'prioridad',      
+        'prioridad',
         'monedaPredeterminada',
-        'impuesto'
-    ];
-    protected $cast = [
+        'impuesto',
         'fechaCreacion',
     ];
 
-    public static function getProducts()
-    {
-        $url = env('URL_API_REAL2B_TEST', 'http://127.0.0.1');
-        $token = '927f6b6b-cbd4-46ba-92e6-d896350d1534';
-        $total = 100;
-        $desde = 0;
-        $allProducts = []; 
 
-        do {
-            $response = Http::withHeaders([
-                'Authorization' =>  $token,
-            ])->POST($url . '/productos', [
-                "_idSolicitud" => "0123456789-XXXXXX-ASDFGHJKLQWERTYU",
-                "desde" => $desde,
-                "total" => $total
-            ]);
+    public static function getProducts(){
+    $url = env('URL_API_REAL2B_TEST', 'http://127.0.0.1');
+    $token = '927f6b6b-cbd4-46ba-92e6-d896350d1534';
+    $total = 100;
+    $desde = 0;
+    $allProducts = []; 
 
-            $products = $response->json();
-            $countProducts = count($products['data']['productos']);
+    do {
+        $response = Http::withHeaders([
+            'Authorization' =>  $token,
+        ])->POST($url . '/productos', [
+            "_idSolicitud" => "0123456789-XXXXXX-ASDFGHJKLQWERTYU",
+            "desde" => $desde,
+            "total" => $total
+        ]);
 
-            if ($countProducts > 0) {
+        $products = $response->json();
+        $countProducts = count($products['data']['productos']);
 
-                $allProducts = array_merge($allProducts, $products['data']['productos']);
+        if ($countProducts > 0) {
+            $allProducts = array_merge($allProducts, $products['data']['productos']);
 
-                $desde += $countProducts;
-            } else {
-
-                break;
+            // Guardar productos en la base de datos
+            foreach ($products['data']['productos'] as $productData) {
+                try {
+                    Product::create([
+                        'guiaTalles' => $productData['guiaTalles'],
+                        'codigo' => $productData['codigo'],
+                        'nombre' => $productData['nombre'],
+                        'IdProducto' => $productData['IdProducto'],
+                        'prioridad' => $productData['prioridad'],
+                        'monedaPredeterminada' => $productData['monedaPredeterminada'],
+                        'impuesto' => $productData['impuesto'],
+                        'fechaCreacion' => $productData['fechaCreacion']
+                    ]);
+                } catch (\Exception $e) {
+                    // Manejar la excepción si ocurre algún error al guardar el producto
+                    // Por ejemplo, puedes registrar el error o realizar alguna otra acción
+                    var_dump( 'Error al guardar el producto: ' . $e->getMessage());
+                }
             }
-        } while ($countProducts >= $total); 
 
-        return $allProducts;
-    }
+            $desde += $countProducts;
+        } else {
+            break;
+        }
+    } while ($countProducts >= $total); 
+
+    return $allProducts;
+}
+
 }
