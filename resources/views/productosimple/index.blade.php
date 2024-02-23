@@ -1,17 +1,12 @@
 @extends('adminlte::page')
-
-@section('title','Productos Configurables')
-
-
-
+@section('title','Productos simple')
 @section('content')
-
 
 <div class="row p-3">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-            <h3 class="m-0 text-dark">Productos:</h3>
+            <h3 class="m-0 text-dark">Productos Configurables:</h3>
             </div>
             <div class="card-body">
                 <div class="container mt-4">
@@ -28,6 +23,8 @@
                                         <th> Moneda Predeterminada </th>
                                         <th> Impuesto </th>
                                         <th> GuiaTalles </th>
+                                        <th> ultima actualizacion </th>
+                                        
                                     </tr>
                                 </thead>
                               
@@ -43,6 +40,7 @@
                                         <td>{{ $item["monedaPredeterminada"] }}</td>
                                         <td>{{ $item["impuesto"] }}</td>
                                         <td>{{ $item["guiaTalles"] }}</td>
+                                        <td>{{ $item["updated_at"] }}</td>
                                         
                                     </tr>
                                     @endforeach

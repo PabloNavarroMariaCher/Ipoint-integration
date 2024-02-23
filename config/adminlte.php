@@ -31,7 +31,7 @@ return [
     */
 
     'use_ico_only' => true,
-    'use_full_favicon' => true,
+    'use_full_favicon' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -313,22 +313,22 @@ return [
             'submenu' => [
                 [
                     'text' => 'Sucursales',
-                    'url'  => 'sources',
+                    'route'  => 'sources.index',
                 ],
                 [
                     'text'    => 'Productos',
                     'url'     => '#',
                     'submenu' => [
-                        [
-                            'text' => 'Productos por SKU',
-                            'icon'    => 'fa-solid fa-barcode',
-                            'url'  => '#',
-                        ],
                         
                         [
                             'text' => 'Productos Configurables',
                             'icon'    => 'fa-solid fa-barcode',
-                            'url'  => 'products',
+                            'route'  => 'productoconfigurable.index',
+                        ],
+                        [
+                            'text' => 'Productos simples',
+                            'icon'    => 'fa-solid fa-barcode',
+                            'route'  => 'productosimple.index',
                         ],
                         
                     ],

@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use App\Models\Product;
+use PhpParser\Node\Stmt\Return_;
 
-class ProductsController extends Controller
+class ProductoSimpleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-    {
-       $products = Product::getProducts();
-       
-       return view('products.index',['products'=>$products]);
+    {  
+        
+        
+        return view('productosimple.index');
     }
 
     /**
