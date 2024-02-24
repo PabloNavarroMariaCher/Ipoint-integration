@@ -28,5 +28,8 @@ class ProductoSimple extends Model
         'PresentacionPrecioLista_USD'
         
     ];
+    public function productosConfigurable(){
+        return $this->belongsTo(ProductoConfigurable::class,'IdProducto');
+    }
 
 }

@@ -20,7 +20,9 @@ class ProductoConfigurable extends Model
         'impuesto',
         'fechaCreacion',
     ];
-
+    public function productossimple(){
+        return $this->hasMany(ProductoSimple::class,'IdProducto');
+    }
 
     public static function getProducts()
     {
