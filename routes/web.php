@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SourceController;
 use App\Http\Controllers\StockController;
-use App\Http\Controllers\ProductsController;
-use App\Models\Products;
+use App\Http\Controllers\ProductoSimpleController;
+use App\Http\Controllers\ProductoConfigurableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +34,5 @@ Route::get('/home', function() {
 
 Route::get('/sources',[SourceController::class,'index'])->name('sources.index');
 Route::resource('/stocks',StockController::class);
-Route::resource('/products',ProductsController::class);
-
+Route::resource('/productoconfigurable',ProductoConfigurableController::class);
+Route::resource('/productosimple',ProductoSimpleController::class);
