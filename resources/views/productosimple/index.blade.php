@@ -11,7 +11,7 @@
                 <div class="card-body">
 
 
-                    <table class="table table-striped table-bordered" id="products">
+                    <table class="table table-striped table-bordered" id="productssimple">
                         <thead>
                             <tr>
                                 <th> IdProducto </th>
@@ -35,26 +35,7 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                           <th> IdProducto </th>
-                                <th> VarianteCodigo </th>
-                                <th> VarianteNombre_color</th>
-                                <th> VariantesAtributos </th>
-                                <th> VarianteCodigo </th>
-                                <th> Moneda Predeterminada </th>
-                                <th> PresentacionCodigoTalle </th>
-                                <th> PresentacionSku </th>
-                                <th> PresentacionStock </th>
-                                <th> PresentacionStockDeposito </th>
-                                <th> PresentacionStockReservado</th>
-                                <th> PresentacionStockOnOrder</th>
-                                <th> PresentacionStockInmediato</th>
-                                <th> PresentacionPrecioVenta_ARS</th>
-                                <th> PresentacionPrecioVenta_USD</th>
-                                <th> PresentacionPrecioLista_ARS</th>
-                                <th> PresentacionPrecioLista_USD</th>
-
-                        </tbody>
+                
                     </table>
 
                 </div>
@@ -70,7 +51,28 @@
 
 @section('js')
     <script>
-        $('#products').DataTable({
+       
+            $('#productssimple').DataTable({
+            "ajax": '{{ route('datatable.productosimple') }}',
+            "columns":[
+            {data: 'IdProducto'},
+            {data: 'VarianteCodigo'},
+            {data: 'VarianteNombre_color'},
+            {data: 'VariantesAtributos'},
+            {data: 'VarianteCodigo'},
+            {data: 'MonedaPredeterminada'},
+            {data:'PresentacionCodigoTalle'},
+            {data: 'PresentacionSku'},
+            {data:'PresentacionStock'},
+            {data: 'PresentacionStockDeposito'},
+            {data: 'PresentacionStockReservado'},
+            {data: 'PresentacionStockOnOrder'},
+            {data: 'PresentacionStockInmediato'},
+            {data: 'PresentacionPrecioVenta_ARS'},
+            {data: 'PresentacionPrecioVenta_USD'},
+            {data: 'PresentacionPrecioLista_ARS'},
+            {data: 'PresentacionPrecioLista_USD'},
+            ],
             reponsive: true,
             autowidth: true,
             "language": {

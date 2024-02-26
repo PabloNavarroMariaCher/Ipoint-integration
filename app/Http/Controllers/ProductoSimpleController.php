@@ -13,7 +13,9 @@ class ProductoSimpleController extends Controller
     public function index()
     {  
         $products2= ProductoSimple::allproductosimple();
-          
+        $productossimples = ProductoSimple::all();
+        
+        return view('productosimple.index',['productossimples'=>$productossimples]);
        
     }
 

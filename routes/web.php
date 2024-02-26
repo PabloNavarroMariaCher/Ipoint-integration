@@ -8,16 +8,7 @@ use App\Http\Controllers\ProductoSimpleController;
 use App\Http\Controllers\ProductoConfigurableController;
 use App\Http\Controllers\datatableController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,3 +29,4 @@ Route::resource('/stocks',StockController::class);
 Route::resource('/productoconfigurable',ProductoConfigurableController::class);
 Route::resource('/productosimple',ProductoSimpleController::class);
 Route::get('datatable/productoconfigurable',[datatableController::class,'allproductoconfigurable'])->name('datatable.productoconfigurable');
+Route::get('datatable/productosimple',[datatableController::class,'allproductosimple'])->name('datatable.productosimple');
