@@ -1,66 +1,74 @@
 @extends('adminlte::page')
-@section('title','Productos simple')
+@section('title', 'Productos simple')
 @section('content')
 
-<div class="row p-3">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-            <h3 class="m-0 text-dark">Productos Configurables:</h3>
-            </div>
-            <div class="card-body">
-                <div class="container mt-4">
-                    <div class="row">
-                        <div class="col">
-                            <table class="table table-striped table-bordered" id="products">
-                                <thead>
-                                    <tr>
-                                        <th> Id_Producto </th>
-                                        <th> Codigo </th>
-                                        <th> Nombre</th>
-                                        <th> Prioridad </th>
-                                        <th> FechaCreacion </th>
-                                        <th> Moneda Predeterminada </th>
-                                        <th> Impuesto </th>
-                                        <th> GuiaTalles </th>
-                                        <th> ultima actualizacion </th>
-                                        
-                                    </tr>
-                                </thead>
-                              
-                             
-                                <tbody>
-                                    @foreach ($products as $item)
-                                    <tr>
-                                        <td>{{ $item["IdProducto"] }}</td>
-                                        <td>{{ $item["codigo"] }}</td>
-                                        <td>{{ $item["nombre"] }}</td>
-                                        <td>{{ $item["prioridad"] }}</td>
-                                        <td>{{ date('d-m-Y', strtotime($item["fechaCreacion"])) }}</td>
-                                        <td>{{ $item["monedaPredeterminada"] }}</td>
-                                        <td>{{ $item["impuesto"] }}</td>
-                                        <td>{{ $item["guiaTalles"] }}</td>
-                                        <td>{{ $item["updated_at"] }}</td>
-                                        
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="col-12 p-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="m-0 text-dark">Productos Simples:</h3>
+                </div>
+                <div class="card-body">
+
+
+                    <table class="table table-striped table-bordered" id="products">
+                        <thead>
+                            <tr>
+                                <th> IdProducto </th>
+                                <th> VarianteCodigo </th>
+                                <th> VarianteNombre_color</th>
+                                <th> VariantesAtributos </th>
+                                <th> VarianteCodigo </th>
+                                <th> Moneda Predeterminada </th>
+                                <th> PresentacionCodigoTalle </th>
+                                <th> PresentacionSku </th>
+                                <th> PresentacionStock </th>
+                                <th> PresentacionStockDeposito </th>
+                                <th> PresentacionStockReservado</th>
+                                <th> PresentacionStockOnOrder</th>
+                                <th> PresentacionStockInmediato</th>
+                                <th> PresentacionPrecioVenta_ARS</th>
+                                <th> PresentacionPrecioVenta_USD</th>
+                                <th> PresentacionPrecioLista_ARS</th>
+                                <th> PresentacionPrecioLista_USD</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                           <th> IdProducto </th>
+                                <th> VarianteCodigo </th>
+                                <th> VarianteNombre_color</th>
+                                <th> VariantesAtributos </th>
+                                <th> VarianteCodigo </th>
+                                <th> Moneda Predeterminada </th>
+                                <th> PresentacionCodigoTalle </th>
+                                <th> PresentacionSku </th>
+                                <th> PresentacionStock </th>
+                                <th> PresentacionStockDeposito </th>
+                                <th> PresentacionStockReservado</th>
+                                <th> PresentacionStockOnOrder</th>
+                                <th> PresentacionStockInmediato</th>
+                                <th> PresentacionPrecioVenta_ARS</th>
+                                <th> PresentacionPrecioVenta_USD</th>
+                                <th> PresentacionPrecioLista_ARS</th>
+                                <th> PresentacionPrecioLista_USD</th>
+
+                        </tbody>
+                    </table>
 
                 </div>
+
             </div>
         </div>
     </div>
- 
 @stop
 
-    @section("css")
+@section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-    @stop
+@stop
 
-    @section('js')
+@section('js')
     <script>
         $('#products').DataTable({
             reponsive: true,
@@ -80,5 +88,5 @@
 
             }
         });
-</script>
+    </script>
 @stop
