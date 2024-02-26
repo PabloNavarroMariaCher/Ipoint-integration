@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product_simples', function (Blueprint $table) {
-            $table->id('IdProducto');
+        Schema::create('products_simples', function (Blueprint $table) {
+            $table->bigInteger('IdProducto');
+            $table->string('CodConfigurable')->nullable();
             $table->string('VarianteCodigo')->nullable();
             $table->string('VarianteNombre_color')->nullable();
             $table->string('VariantesAtributos')->nullable();

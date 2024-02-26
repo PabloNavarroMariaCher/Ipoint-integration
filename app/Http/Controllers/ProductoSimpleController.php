@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductoSimple;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Return_;
+
 
 class ProductoSimpleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+  
     public function index()
     {  
-        
-        
-        return view('productosimple.index');
+        $products2= ProductoSimple::allproductosimple();
+          
+       
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+  
     public function create()
     {
         //

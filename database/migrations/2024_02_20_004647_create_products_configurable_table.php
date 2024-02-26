@@ -13,11 +13,7 @@ return new class extends Migration
     {
         Schema::create('products_configurable', function (Blueprint $table) {
             
-            $table->foreignId('IdProducto')
-                  ->nullable()
-                  ->constrained()
-                  ->cascadeOnUpdate('product_simples')
-                  ->nullOnDelete();
+            $table->string('IdProducto');       
             $table->string('guiaTalles')->nullable();
             $table->string('codigo');
             $table->string('nombre');
