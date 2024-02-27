@@ -1,9 +1,10 @@
 @extends('adminlte::page')
-@section('title', 'Productos simple')
+
+
 @section('content')
 
     <div class="row">
-        <div class="col-12 p-2">
+        <div class="">
             <div class="card">
                 <div class="card-header">
                     <h3 class="m-0 text-dark">Productos Simples:</h3>
@@ -11,12 +12,16 @@
                 <div class="card-body">
 
 
-                    <table class="table table-striped table-bordered" id="productssimple">
+                    <table class="table table-striped " id="productssimple" style="width: 75%">
                         <thead>
                             <tr>
+                                
+                             
                                 <th> IdProducto </th>
+                                <th>CodConfigurable</th>
+                                <th>NombreConfigurable</th>
                                 <th> VarianteCodigo </th>
-                                <th> VarianteNombre_color</th>
+                                <th>VarianteNombre_color </th>
                                 <th> VariantesAtributos </th>
                                 <th> VarianteCodigo </th>
                                 <th> Moneda Predeterminada </th>
@@ -35,7 +40,7 @@
                             </tr>
                         </thead>
 
-                
+
                     </table>
 
                 </div>
@@ -43,38 +48,80 @@
             </div>
         </div>
     </div>
-@stop
+@endsection
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+
 
 @section('js')
     <script>
-       
-            $('#productssimple').DataTable({
-            "ajax": '{{ route('datatable.productosimple') }}',
-            "columns":[
-            {data: 'IdProducto'},
-            {data: 'VarianteCodigo'},
-            {data: 'VarianteNombre_color'},
-            {data: 'VariantesAtributos'},
-            {data: 'VarianteCodigo'},
-            {data: 'MonedaPredeterminada'},
-            {data:'PresentacionCodigoTalle'},
-            {data: 'PresentacionSku'},
-            {data:'PresentacionStock'},
-            {data: 'PresentacionStockDeposito'},
-            {data: 'PresentacionStockReservado'},
-            {data: 'PresentacionStockOnOrder'},
-            {data: 'PresentacionStockInmediato'},
-            {data: 'PresentacionPrecioVenta_ARS'},
-            {data: 'PresentacionPrecioVenta_USD'},
-            {data: 'PresentacionPrecioLista_ARS'},
-            {data: 'PresentacionPrecioLista_USD'},
-            ],
-            reponsive: true,
+        $('#productssimple').DataTable({
+            responsive: true,
             autowidth: true,
+            select: true,
+            
+            "ajax": '{{ route('datatable.productosimple') }}',
+            "columns": [
+                
+                {
+                    data: 'IdProducto'
+                },
+                {
+                    data: 'CodConfigurable'
+                },
+                {
+                    data: 'NombreConfigurable'
+                },
+
+                {
+                    data: 'VarianteCodigo'
+                },
+                {
+                    data: 'VarianteNombre_color'
+                },
+                {
+                    data: 'VariantesAtributos'
+                },
+                {
+                    data: 'VarianteCodigo'
+                },
+                {
+                    data: 'MonedaPredeterminada'
+                },
+                {
+                    data: 'PresentacionCodigoTalle'
+                },
+                {
+                    data: 'PresentacionSku'
+                },
+                {
+                    data: 'PresentacionStock'
+                },
+                {
+                    data: 'PresentacionStockDeposito'
+                },
+                {
+                    data: 'PresentacionStockReservado'
+                },
+                {
+                    data: 'PresentacionStockOnOrder'
+                },
+                {
+                    data: 'PresentacionStockInmediato'
+                },
+                {
+                    data: 'PresentacionPrecioVenta_ARS'
+                },
+                {
+                    data: 'PresentacionPrecioVenta_USD'
+                },
+                {
+                    data: 'PresentacionPrecioLista_ARS'
+                },
+                {
+                    data: 'PresentacionPrecioLista_USD'
+                },
+            ],
+
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por pagina",
                 "zeroRecords": "Nada encontrado Mil disculpas",
@@ -91,4 +138,4 @@
             }
         });
     </script>
-@stop
+@endsection

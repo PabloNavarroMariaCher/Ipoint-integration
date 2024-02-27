@@ -15,6 +15,7 @@ return new class extends Migration
             $table->bigInteger('IdProducto');
             $table->string('CodConfigurable')->nullable();
             $table->string('NombreConfigurable')->nullable();
+            $table->string('MonedaPredeterminada')->nullable();
             $table->string('VarianteCodigo')->nullable();
             $table->string('VarianteNombre_color')->nullable();
             $table->string('VariantesAtributos')->nullable();

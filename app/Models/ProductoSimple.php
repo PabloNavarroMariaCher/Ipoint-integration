@@ -16,9 +16,9 @@ class ProductoSimple extends Model
         'CodConfigurable',
         'NombreConfigurable',
         'VarianteCodigo',
+        'MonedaPredeterminada',
         'VarianteNombre_color',
         'VariantesAtributos',
-
         'PresentacionNombre',
         'PresentacionCodigoTalle',
         'PresentacionSku',
@@ -27,7 +27,6 @@ class ProductoSimple extends Model
         'PresentacionStockReservado',
         'PresentacionStockOnOrder',
         'PresentacionStockInmediato',
-
         'PresentacionPrecioVenta_ARS',
         'PresentacionPrecioVenta_USD',
         'PresentacionPrecioLista_ARS',

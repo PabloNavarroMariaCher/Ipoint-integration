@@ -14,7 +14,8 @@ class ProductoConfigurableController extends Controller
     {   
        //ProductoConfigurable::getProducts(); //trae todos los productos
         $products= ProductoConfigurable::all();
-        return view('productoconfigurable.index',['products'=>$products]);
+        return view('productoconfigurable.index');
+        //,['products'=>$products]);
     }
 
     /**

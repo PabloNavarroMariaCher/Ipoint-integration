@@ -17,9 +17,9 @@ class datatableController extends Controller
     }
     public function allproductosimple(){
 
-        $productosimple = ProductoSimple::all();
+        $productosimple2 = ProductoSimple::all();
         
-        return datatables()->of($productosimple)->toJson() ;
+        return datatables()->of($productosimple2)->toJson() ;
 
     }
 }

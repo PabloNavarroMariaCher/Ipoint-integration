@@ -302,11 +302,11 @@ return [
         ],
 
         // Sidebar items:
-     
-    
-     
+
+
+
         ['header' => 'Aplicacion :'],
-   
+
         [
             'text'    => 'I_Point',
             'icon'    => 'fas fa-fw fa-share',
@@ -319,7 +319,7 @@ return [
                     'text'    => 'Productos',
                     'url'     => '#',
                     'submenu' => [
-                        
+
                         [
                             'text' => 'Productos Configurables',
                             'icon'    => 'fa-solid fa-barcode',
@@ -330,7 +330,7 @@ return [
                             'icon'    => 'fa-solid fa-barcode',
                             'route'  => 'productosimple.index',
                         ],
-                        
+
                     ],
                 ],
                 [
@@ -346,7 +346,7 @@ return [
                             'text'    => 'Stock por sku',
                             'icon'    => 'fa-solid fa-barcode',
                             'url'     => 'stocks',
-                        
+
                         ],
                     ],
                 ],
@@ -356,9 +356,19 @@ return [
                 ],
             ],
         ],
-      
-     
-       
+        ['header' => 'Log:'],
+
+        [
+            'text'    => 'Errores ',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Log',
+                    'icon' => 'fa-solid fa-gear-code',
+                    'url'  => '/log-viewer',
+                ]
+            ]
+        ]
     ],
 
     /*
@@ -402,17 +412,53 @@ return [
                 [
                     'type' => 'js',
                     'asset' => true,
-                    'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
+                    'location' => 'https://code.jquery.com/jquery-3.7.1.js',
                 ],
                 [
                     'type' => 'js',
                     'asset' => true,
-                    'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/2.0.1/js/dataTables.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap4.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap4.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => true,
-                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
+                    
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap4.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'https://cdn.datatables.net/responsive/3.0.0/css/responsive.bootstrap4.css',
                 ],
             ],
         ],
@@ -463,6 +509,16 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+        'font-awesome' => [
+            'active' => true,
+            'files' => [  
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
                 ],
             ],
         ],

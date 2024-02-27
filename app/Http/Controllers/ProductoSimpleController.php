@@ -12,10 +12,11 @@ class ProductoSimpleController extends Controller
   
     public function index()
     {  
-        $products2= ProductoSimple::allproductosimple();
-        $productossimples = ProductoSimple::all();
+        //$products2= ProductoSimple::allproductosimple();
+        // $productosimples = ProductoSimple::all();
         
-        return view('productosimple.index',['productossimples'=>$productossimples]);
+        return view('productosimple.index');
+        //,['productossimples'=>$productosimples]);
        
     }
 
