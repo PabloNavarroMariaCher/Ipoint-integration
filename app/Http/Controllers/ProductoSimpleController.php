@@ -12,7 +12,7 @@ class ProductoSimpleController extends Controller
   
     public function index()
     {  
-        //$products2= ProductoSimple::allproductosimple();
+        $products2= ProductoSimple::allproductosimple();
         // $productosimples = ProductoSimple::all();
         
         return view('productosimple.index');

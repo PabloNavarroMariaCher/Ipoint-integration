@@ -313,10 +313,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Sucursales',
+                    'icon'    => 'fa-solid fa-minus',
                     'route'  => 'sources.index',
                 ],
                 [
                     'text'    => 'Productos',
+                    'icon' => 'fa-solid fa-minus',
                     'url'     => '#',
                     'submenu' => [
 
@@ -336,6 +338,7 @@ return [
                 [
                     'text' => 'Stock',
                     'url'  => '#',
+                    'icon'    => 'fa-solid fa-minus',
                     'submenu' => [
                         [
                             'text' => 'Ubicar sku en Tienda ',
@@ -352,6 +355,7 @@ return [
                 ],
                 [
                     'text' => 'Ordenes',
+                    'icon'    => 'fa-solid fa-minus',
                     'url'  => '#',
                 ],
             ],
@@ -364,7 +368,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Log',
-                    'icon' => 'fa-solid fa-gear-code',
+                    'icon' => 'fa-magnifying-glass',
                     'url'  => '/log-viewer',
                 ]
             ]
@@ -448,7 +452,7 @@ return [
                     'type' => 'css',
                     'asset' => true,
                     'location' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
-                    
+
                 ],
                 [
                     'type' => 'css',
@@ -514,7 +518,7 @@ return [
         ],
         'font-awesome' => [
             'active' => true,
-            'files' => [  
+            'files' => [
                 [
                     'type' => 'css',
                     'asset' => true,

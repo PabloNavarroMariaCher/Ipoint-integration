@@ -26,7 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         
-      
-        return view('home');
+      $countproductosconfigurables= ProductoConfigurable::count();
+      $countsku = ProductoSimple::count();
+     
+        return view('home',[
+            'countproductosconfigurables'=> $countproductosconfigurables,
+            'countsku'=>$countsku
+        ]);
     }
 }
