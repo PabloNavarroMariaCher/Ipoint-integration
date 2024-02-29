@@ -7,6 +7,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductoSimpleController;
 use App\Http\Controllers\ProductoConfigurableController;
 use App\Http\Controllers\datatableController;
+use App\Http\Controllers\PreciosController;
 
 
 
@@ -28,3 +29,4 @@ Route::resource('/productoconfigurable',ProductoConfigurableController::class);
 Route::resource('/productosimple',ProductoSimpleController::class);
 Route::get('datatable/productoconfigurable',[datatableController::class,'allproductoconfigurable'])->name('datatable.productoconfigurable');
 Route::get('datatable/productosimple',[datatableController::class,'allproductosimple'])->name('datatable.productosimple');
+Route::get('precios/index',[PreciosController::class,'index'])->name('precios.index');

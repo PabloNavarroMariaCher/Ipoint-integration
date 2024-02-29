@@ -15,7 +15,7 @@ class StockController extends Controller
     {
        $products = Stock::getProducts();
       
-       return view('stocks.index',['products'=> $products]);
+       return view('stock.index',['products'=> $products]);
 
     }
     /**

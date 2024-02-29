@@ -332,6 +332,13 @@ return [
                             'icon'    => 'fa-solid fa-barcode',
                             'route'  => 'productosimple.index',
                         ],
+                        [
+                            'text' => 'Precios de productos',
+                            'icon'    => 'fa-solid fa-barcode',
+                            'route'  => 'precios.index',
+                        ],
+                        
+
 
                     ],
                 ],
