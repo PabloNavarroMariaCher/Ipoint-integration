@@ -76,6 +76,7 @@ class ProductoSimple extends Model
                                     'IdProducto' => $productoSimple['IdProducto'],
                                     'CodConfigurable' => $productoSimple['codigo'],
                                     'NombreConfigurable'=>$productoSimple['nombre'],
+                                    'MonedaPredeterminada'=>$productoSimple['monedaPredeterminada'],
                                     'VarianteCodigo' => $variantes['codigo'],
                                     'VarianteNombre_color' => $variantes['nombre'],
                                     'VariantesAtributos' => $variantes['atributos']['sale'],
