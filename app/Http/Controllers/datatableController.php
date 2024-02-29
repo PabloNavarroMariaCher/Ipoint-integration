@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\ProductoConfigurable;
 use App\Models\ProductoSimple;
+use App\Models\Deposito;
 
 class datatableController extends Controller
 {
@@ -22,4 +23,10 @@ class datatableController extends Controller
         return datatables()->of($productosimple2)->toJson() ;
 
     }
+    public function alldeposito(){
+        $depositos = Deposito::all();
+        return datatables()->of($depositos)->toJson() ;
+    }
+   
+
 }

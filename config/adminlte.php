@@ -314,7 +314,7 @@ return [
                 [
                     'text' => 'Sucursales',
                     'icon'    => 'fa-solid fa-minus',
-                    'route'  => 'sources.index',
+                    'route'  => 'depositos.index',
                 ],
                 [
                     'text'    => 'Productos',
