@@ -12,9 +12,10 @@ class ProductoConfigurableController extends Controller
      */
     public function index()
     {   
-       ProductoConfigurable::getProducts(); //trae todos los productos
-        $products= ProductoConfigurable::all();
-        return view('productoconfigurable.index',['products'=>$products]);
+       //ProductoConfigurable::getProducts(); //trae todos los productos
+        // $products= ProductoConfigurable::all();
+        return view('productoconfigurable.index');
+        //,['products'=>$products]);
     }
 
     /**

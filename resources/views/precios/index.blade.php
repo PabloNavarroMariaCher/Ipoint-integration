@@ -7,7 +7,7 @@
         <div class="">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="m-0 text-dark">Productos Simples:</h3>
+                    <h3 class="m-0 text-dark">Precios I_Point:</h3>
                 </div>
                 <div class="card-body">
 
@@ -18,20 +18,8 @@
                                 
                              
                                 <th> IdProducto </th>
-                                <th>CodConfigurable</th>
-                                <th>NombreConfigurable</th>
-                                <th> VarianteCodigo </th>
-                                <th>VarianteNombre_color </th>
-                                <th> VariantesAtributos </th>
-                                <th> VarianteCodigo </th>
-                                <th> Moneda Predeterminada </th>
-                                <th> PresentacionCodigoTalle </th>
-                                <th> PresentacionSku </th>
-                                <th> PresentacionStock </th>
-                                <th> PresentacionStockDeposito </th>
-                                <th> PresentacionStockReservado</th>
-                                <th> PresentacionStockOnOrder</th>
-                                <th> PresentacionStockInmediato</th>
+                                <th> CodConfigurable</th>                         
+                                <th> PresentacionSku </th>                          
                                 <th> PresentacionPrecioVenta_ARS</th>
                                 <th> PresentacionPrecioVenta_USD</th>
                                 <th> PresentacionPrecioLista_ARS</th>
@@ -69,44 +57,7 @@
                     data: 'CodConfigurable'
                 },
                 {
-                    data: 'NombreConfigurable'
-                },
-
-                {
-                    data: 'VarianteCodigo'
-                },
-                {
-                    data: 'VarianteNombre_color'
-                },
-                {
-                    data: 'VariantesAtributos'
-                },
-                {
-                    data: 'VarianteCodigo'
-                },
-                {
-                    data: 'MonedaPredeterminada'
-                },
-                {
-                    data: 'PresentacionCodigoTalle'
-                },
-                {
                     data: 'PresentacionSku'
-                },
-                {
-                    data: 'PresentacionStock'
-                },
-                {
-                    data: 'PresentacionStockDeposito'
-                },
-                {
-                    data: 'PresentacionStockReservado'
-                },
-                {
-                    data: 'PresentacionStockOnOrder'
-                },
-                {
-                    data: 'PresentacionStockInmediato'
                 },
                 {
                     data: 'PresentacionPrecioVenta_ARS'

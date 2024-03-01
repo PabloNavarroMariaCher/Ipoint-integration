@@ -1,13 +1,12 @@
 @extends('adminlte::page')
 
-
 @section('content')
 
     <div class="row">
         <div class="">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="m-0 text-dark">Productos Simples:</h3>
+                    <h3 class="m-0 text-dark">Stock Productos:</h3>
                 </div>
                 <div class="card-body">
 
@@ -19,23 +18,14 @@
                              
                                 <th> IdProducto </th>
                                 <th>CodConfigurable</th>
-                                <th>NombreConfigurable</th>
-                                <th> VarianteCodigo </th>
-                                <th>VarianteNombre_color </th>
-                                <th> VariantesAtributos </th>
-                                <th> VarianteCodigo </th>
-                                <th> Moneda Predeterminada </th>
-                                <th> PresentacionCodigoTalle </th>
+                                <th>NombreConfigurable</th>                          
                                 <th> PresentacionSku </th>
                                 <th> PresentacionStock </th>
                                 <th> PresentacionStockDeposito </th>
                                 <th> PresentacionStockReservado</th>
                                 <th> PresentacionStockOnOrder</th>
                                 <th> PresentacionStockInmediato</th>
-                                <th> PresentacionPrecioVenta_ARS</th>
-                                <th> PresentacionPrecioVenta_USD</th>
-                                <th> PresentacionPrecioLista_ARS</th>
-                                <th> PresentacionPrecioLista_USD</th>
+                                
 
                             </tr>
                         </thead>
@@ -70,26 +60,7 @@
                 },
                 {
                     data: 'NombreConfigurable'
-                },
-
-                {
-                    data: 'VarianteCodigo'
-                },
-                {
-                    data: 'VarianteNombre_color'
-                },
-                {
-                    data: 'VariantesAtributos'
-                },
-                {
-                    data: 'VarianteCodigo'
-                },
-                {
-                    data: 'MonedaPredeterminada'
-                },
-                {
-                    data: 'PresentacionCodigoTalle'
-                },
+                },  
                 {
                     data: 'PresentacionSku'
                 },
@@ -108,18 +79,7 @@
                 {
                     data: 'PresentacionStockInmediato'
                 },
-                {
-                    data: 'PresentacionPrecioVenta_ARS'
-                },
-                {
-                    data: 'PresentacionPrecioVenta_USD'
-                },
-                {
-                    data: 'PresentacionPrecioLista_ARS'
-                },
-                {
-                    data: 'PresentacionPrecioLista_USD'
-                },
+                
             ],
 
             "language": {

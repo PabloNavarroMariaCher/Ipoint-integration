@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProductoSimple;
+use App\Models\ProductoConfigurable;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        
+      $countproductosconfigurables= ProductoConfigurable::count();
+      $countsku = ProductoSimple::count();
+     
+        return view('home',[
+            'countproductosconfigurables'=> $countproductosconfigurables,
+            'countsku'=>$countsku
+        ]);
     }
 }

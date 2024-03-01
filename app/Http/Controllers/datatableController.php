@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\ProductoConfigurable;
-
+use App\Models\ProductoSimple;
 
 class datatableController extends Controller
 {
@@ -14,5 +14,12 @@ class datatableController extends Controller
        $productoconfigurables = ProductoConfigurable::all();
 
        return datatables()->of($productoconfigurables)->toJson() ;
+    }
+    public function allproductosimple(){
+
+        $productosimple2 = ProductoSimple::all();
+        
+        return datatables()->of($productosimple2)->toJson() ;
+
     }
 }
