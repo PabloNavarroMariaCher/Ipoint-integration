@@ -53,6 +53,7 @@ class Deposito extends Model
         } while ($countsucursal >= $total);
         return $sucursales;
     }
+    
 
 
 }
