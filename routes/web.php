@@ -35,3 +35,4 @@ Route::get('precios/index',[PreciosController::class,'index'])->name('precios.in
 Route::resource('/depositos', DepositoController::class);
 
 Route::get('/actualizar-depositos', [DepositoController::class, 'updatedDepositos'])->name('actualizar-depositos');
+Route::get('/actualizar-ProductosConfigurables', [ProductoConfigurableController::class, 'updateProductosconfiguragles'])->name('actualizar-ProductosConfigurables');

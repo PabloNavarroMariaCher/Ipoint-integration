@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Deposito;
 use Illuminate\Http\Request;
 use App\Models\ProductoSimple;
 use App\Models\ProductoConfigurable;
+
 
 class HomeController extends Controller
 {
@@ -28,10 +30,12 @@ class HomeController extends Controller
         
       $countproductosconfigurables= ProductoConfigurable::count();
       $countsku = ProductoSimple::count();
+      $countDeposito = Deposito::count();
      
         return view('home',[
             'countproductosconfigurables'=> $countproductosconfigurables,
-            'countsku'=>$countsku
+            'countsku'=>$countsku,
+            'countDeposito'=>$countDeposito,
         ]);
     }
 }

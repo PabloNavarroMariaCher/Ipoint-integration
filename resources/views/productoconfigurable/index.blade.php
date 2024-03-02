@@ -1,5 +1,12 @@
 @extends('adminlte::page')
-@section('title', 'Productos Configurables')
+
+@section('title','Productos Configurables')
+ @section('content_header')
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="m-0 text-dark"></h1>
+            <a class="btn btn-primary" href="{{ route('actualizar-ProductosConfigurables') }}">Actualizar Productos Configurables</a>    
+    </div>
+@stop
 @section('content')
 
     <div class="row p-1">
