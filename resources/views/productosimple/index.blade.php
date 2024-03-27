@@ -1,4 +1,13 @@
 @extends('adminlte::page')
+@section('title', 'Productos simples')
+@section('content_header')
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="m-0 text-dark"></h1>
+        <a class="btn btn-primary" href="{{ route('actualizar-ProductosSimples') }}">
+            Actualizar Productos
+            Simples</a>
+    </div>
+@stop
 
 
 @section('content')

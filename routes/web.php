@@ -36,3 +36,4 @@ Route::resource('/depositos', DepositoController::class);
 
 Route::get('/actualizar-depositos', [DepositoController::class, 'updatedDepositos'])->name('actualizar-depositos');
 Route::get('/actualizar-ProductosConfigurables', [ProductoConfigurableController::class, 'updateProductosconfiguragles'])->name('actualizar-ProductosConfigurables');
+Route::get('/actualizar-ProductosSimples', [ProductoSimpleController::class, 'updateProductosSimples'])->name('actualizar-ProductosSimples');

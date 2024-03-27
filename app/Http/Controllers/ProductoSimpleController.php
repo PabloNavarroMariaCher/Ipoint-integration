@@ -12,11 +12,10 @@ class ProductoSimpleController extends Controller
   
     public function index()
     {  
-        //$products2= ProductoSimple::allproductosimple();
-        // $productosimples = ProductoSimple::all();
+   
         
         return view('productosimple.index');
-        //,['productossimples'=>$productosimples]);
+        
        
     }
 
@@ -45,9 +44,10 @@ class ProductoSimpleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function updateProductosSimples()
     {
-        //
+        $products2= ProductoSimple::allproductosimple();
+        return view('productosimple.index');
     }
 
     /**

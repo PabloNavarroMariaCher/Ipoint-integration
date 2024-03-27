@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="m-0 text-dark">Stock Productos:</h3>
+                    <a class="btn btn-success" href="#">ubicar en tienda </a>
                 </div>
                 <div class="card-body">
 
